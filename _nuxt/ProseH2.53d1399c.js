@@ -1,0 +1,1 @@
+import{_ as s,o as _,c as o,m as t}from"./entry.f23441e5.js";const c={},n={class:"h2"};function a(e,r){return _(),o("div",n,[t(e.$slots,"default",{},void 0,!0)])}const l=s(c,[["render",a],["__scopeId","data-v-93a78c71"]]);export{l as default};
