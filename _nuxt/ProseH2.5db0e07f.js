@@ -1,0 +1,1 @@
+import{_ as o,o as r,c as s,q as t}from"./entry.beba0e3c.js";const c={};function n(e,a){return r(),s("h2",null,[t(e.$slots,"default")])}const _=o(c,[["render",n]]);export{_ as default};
