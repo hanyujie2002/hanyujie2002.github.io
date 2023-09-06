@@ -1,0 +1,1 @@
+import n from"./ContentDoc.cb87ba86.js";import{_ as e,o as t,c,e as _}from"./entry.431471bc.js";const r={},s={id:"blog_content"};function a(m,i){const o=n;return t(),c("main",s,[_(o)])}const d=e(r,[["render",a]]);export{d as _};
