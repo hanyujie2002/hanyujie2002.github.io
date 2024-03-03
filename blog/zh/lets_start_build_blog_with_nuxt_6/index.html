@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html >
+<head><meta charset="utf-8">
+<title>从零开始搭建自己的博客 六：导航栏</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@*/dist/katex.min.css">
+<meta property="og:image" content="/favicon.png">
+<meta property="og:site_name" content="YuJie Han's blog">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="从零开始搭建自己的博客 六：导航栏">
+<meta name="description" content="到这里我们的博客渲染还有博客列表渲染都做的差不多了，我们接着来弄一下这个导航栏。">
+<meta property="og:description" content="到这里我们的博客渲染还有博客列表渲染都做的差不多了，我们接着来弄一下这个导航栏。"><link rel="preload" as="fetch" crossorigin="anonymous" href="/blog/zh/lets_start_build_blog_with_nuxt_6/_payload.json"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/entry.26c38fba.js"><link rel="preload" as="style" href="/_nuxt/entry.4e5d4303.css"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/default.8e3dc410.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/_...slug_.3275aad0.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BlogContent.721d1c45.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ContentDoc.35d500b8.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ContentRenderer.bbbec560.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ContentRendererMarkdown.5c034ab9.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/index.a6ef77ff.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/preview.4f15138c.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ContentQuery.630b6d4a.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/asyncData.a8b59697.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/query.7b1054b0.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/utils.4d957aad.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseH1.268f120a.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseP.9fedc0a0.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseH2.c6c4a4fe.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseCode.7d600a71.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseCodeInline.e8116f74.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/ProseImg.4cc62582.js"><link rel="prefetch" as="image" type="image/svg+xml" href="/_nuxt/menu.83edc31c.svg"><link rel="stylesheet" href="/_nuxt/entry.4e5d4303.css"><style>.small-screen-languages[data-v-497c81cb]{border:double #000;display:flex;flex-direction:column;font-family:sans-serif;font-size:x-large}#broad-screen-menu[data-v-497c81cb]{align-items:center;display:flex;display:none;gap:1vw;width:100%}#small-screen-menu[data-v-497c81cb]{display:block}#menu[data-v-497c81cb]{height:100%;padding:.5rem 1rem;width:100%}.menu-list[data-v-497c81cb]{background:#fff;border:thick double;box-shadow:5px 5px;display:flex;flex-direction:column;font-size:x-large;padding:3px;position:absolute;z-index:1}.menu-list[data-v-497c81cb] :link,.menu-list[data-v-497c81cb] :visited{color:#000;font-family:sans-serif;text-decoration:none}nav[data-v-497c81cb]{background-color:#000;display:flex;gap:1vw;padding:1rem 0}nav .links[data-v-497c81cb]:link,nav .links[data-v-497c81cb]:visited{border:thick double;color:#fff;font-family:sans-serif;font-size:large;font-weight:bolder;padding:.5rem 1rem;text-decoration:none}nav .links[data-v-497c81cb]:hover{background-color:#f4f4f5;box-shadow:5px 5px #fff;color:#000;text-decoration:underline}nav .links[data-v-497c81cb]:active{background:#fff}nav .links.current_page[data-v-497c81cb]{background-color:#f4f4f5;box-shadow:5px 5px #fff;color:#000}#footer[data-v-497c81cb]{background-color:#000;color:#fff;padding:1rem 0;text-align:center}.languages[data-v-497c81cb]{display:none}#lang_sel[data-v-497c81cb]{background-color:#000;border:thick double;color:#fff;font-family:sans-serif;font-size:large;font-weight:bolder;margin-right:3vw;padding:.5rem 1rem;text-decoration:none}#lang_sel[data-v-497c81cb]:hover{background-color:#fff;color:#000}#lang_sel+.languages[data-v-497c81cb]:hover,#lang_sel:hover+.languages[data-v-497c81cb]{background-color:#fff;border:thick double;display:flex;flex-direction:column;font-family:sans-serif;font-size:x-large;position:absolute}.languages[data-v-497c81cb] :link,.languages[data-v-497c81cb] :visited{color:#000;text-decoration:none}.option[data-v-497c81cb]{padding:1rem}.option[data-v-497c81cb]:hover{background-color:#000;color:#fff}#main[data-v-497c81cb]{background-color:#fff;display:grid;grid-template-rows:auto 1fr auto;min-height:100vh}main[data-v-497c81cb]{margin-left:3vw;margin-right:3vw;max-width:100vw;overflow-x:auto}@media screen and (min-width:1000px){#main[data-v-497c81cb]{margin:auto;max-width:1000px}.languages[data-v-497c81cb]{right:unset}#content_wrapper[data-v-497c81cb]{border:thick double}#small-screen-menu[data-v-497c81cb]{display:none}#broad-screen-menu[data-v-497c81cb]{display:flex}}</style><style>.hello[data-v-d99102ce]{background-color:#282a36;border:thick double #fff;color:#fff;overflow-x:auto;padding:0 .3rem}</style><style>.prose-img[data-v-e7a78aa7]{display:flex;margin:auto;padding-bottom:1rem;padding-top:1rem}.prose-img img[data-v-e7a78aa7]{border:thick double;display:block;margin:auto;max-width:98%}.prose-img .caption[data-v-e7a78aa7]{background-color:rgba(0,0,0,.5);bottom:0;color:#fff;left:0;padding:8px;position:absolute;right:0}</style><style>body{background-color:#fafafa;margin:0}body ::-moz-selection{background-color:#000;color:#fff}body ::selection{background-color:#000;color:#fff}body::-webkit-scrollbar{width:.5rem}body::-webkit-scrollbar-thumb{background-color:#000}body::-webkit-scrollbar-track{background-color:#fff}</style></head>
+<body class="body"><div id="__nuxt"><div><div id="main" data-v-497c81cb><nav data-v-497c81cb><span id="small-screen-menu" data-v-497c81cb><div id="menu" data-v-497c81cb><img src="/_nuxt/menu.83edc31c.svg" data-v-497c81cb></div><div class="menu-list" style="display:none;" data-v-497c81cb><a href="/" class="option" data-v-497c81cb>Home</a><a href="/about" class="option" data-v-497c81cb>about me</a><div class="small-screen-languages" data-v-497c81cb><button style="padding-left:1rem;border-bottom:double black;" data-v-497c81cb>文/A</button><a href="/blog/en" class="option" data-v-497c81cb>English ↗</a><a href="/blog/zh" class="option" data-v-497c81cb>中文 ↗</a></div></div></span><div id="broad-screen-menu" data-v-497c81cb><a href="/" class="links" style="margin-left:3vw;" data-v-497c81cb>Home</a><a href="/about" class="links" data-v-497c81cb>about me</a><div style="margin-left:auto;" data-v-497c81cb><button id="lang_sel" data-v-497c81cb>文/A</button><div class="languages" data-v-497c81cb><a href="/blog/en" class="option" data-v-497c81cb>English</a><a href="/blog/zh" class="option" data-v-497c81cb>中文</a></div></div></div></nav><main data-v-497c81cb><!--[--><main id="blog_content"><!--[--><div><h1 id="从零开始搭建自己的博客-六导航栏"><!--[-->从零开始搭建自己的博客 六：导航栏<!--]--></h1><p><!--[-->到这里我们的博客渲染还有博客列表渲染都做的差不多了，我们接着来弄一下这个导航栏。<!--]--></p><h2 id="添加导航按钮"><!--[-->添加导航按钮<!--]--></h2><p><!--[-->我们首先要添加导航到主页（<code><!--[-->/<!--]--></code>），个人介绍页（<code><!--[-->/about<!--]--></code>）以及博客文章的按钮。<!--]--></p><p><!--[-->修改 <code><!--[-->@/layouts/default.vue<!--]--></code> 文件中导航栏（即 <code><!--[-->&lt;/nav&gt;<!--]--></code>）的代码如下：<!--]--></p><div class="hello language-vue" code="&lt;!-- @/layout/default.vue --&gt;
+    &lt;nav&gt;
+      &lt;button&gt;
+        &lt;NuxtLink to=&quot;/&quot;&gt;主页&lt;/NuxtLink&gt;
+        &lt;NuxtLink to=&quot;/about&quot;&gt;个人介绍&lt;/NuxtLink&gt;
+        &lt;NuxtLink to=&quot;/blog&quot;&gt;博客文章&lt;/NuxtLink&gt;
+    &lt;/nav&gt;
+" language="vue" meta data-v-d99102ce><!--[--><pre><code><span class="line" line="1"><span class="ct-779485">&lt;!-- @/layout/default.vue --&gt;
+</span></span><span class="line" line="2"><span class="ct-883780">    </span><span class="ct-801142">&lt;nav&gt;
+</span></span><span class="line" line="3"><span class="ct-883780">      &lt;button&gt;
+</span></span><span class="line" line="4"><span class="ct-883780">        &lt;NuxtLink to=&quot;/&quot;&gt;主页&lt;/NuxtLink&gt;
+</span></span><span class="line" line="5"><span class="ct-883780">        &lt;NuxtLink to=&quot;/about&quot;&gt;个人介绍&lt;/NuxtLink&gt;
+</span></span><span class="line" line="6"><span class="ct-883780">        &lt;NuxtLink to=&quot;/blog&quot;&gt;博客文章&lt;/NuxtLink&gt;
+</span></span><span class="line" line="7"><span class="ct-883780">    </span><span class="ct-801142">&lt;/nav&gt;</span></span></code></pre><!--]--></div><p><!--[-->结果导航栏长这样：<!--]--></p><p><!--[--><div class="prose-img" data-v-e7a78aa7><img src="https://cdn.jsdelivr.net/gh/hanyujie2002/my_pictures/images/20240128202834.png" alt="20240128202834" data-v-e7a78aa7><!----></div><!--]--></p><p><!--[-->嗯，不太好看。所以我们要改进一下样式。<!--]--></p><p><!--[-->添加如下 CSS 代码：<!--]--></p><div class="hello language-css" code="/* @/layout/default.vue */
+&lt;style scoped&gt;
+  #main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: white;
+  }
+
+  nav {
+    display: block;
+    background-color: black;
+    color: white;
+  }
+
+  nav ul {
+    margin: 1rem 3vw;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav .nav-item {
+    display: list-item;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  nav .nav-item a {
+    display: block;
+  }
+
+  nav .nav-item a:link, nav .nav-item a:visited {
+        font-size: large;
+        font-weight: bolder;
+        font-family: sans-serif;
+        text-decoration: none;
+
+        border: thick double;
+
+        color: white;
+        padding: 0.5rem 1rem;
+        font-family: sans-serif;
+  }
+
+  nav .nav-item a:hover {
+        color: black;
+        text-decoration: underline;
+        background-color: #f4f4f5;
+        box-shadow: 5px 5px white;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+  }
+
+  nav .nav-btn:link, nav .nav-btn:visited {
+      font-size: large;
+      font-weight: bolder;
+      font-family: sans-serif;
+      text-decoration: none;
+
+
+      color: white;
+      font-family: sans-serif;
+  }
+
+  nav .nav-btn:hover {
+      color: black;
+      text-decoration: underline;
+      background-color: #f4f4f5;
+      box-shadow: 5px 5px white;
+  }
+
+  nav .nav-btn:active {
+      background: white;
+  } 
+&lt;/style&gt;
+" language="css" meta data-v-d99102ce><!--[--><pre><code><span class="line" line="1"><span class="ct-779485">/* @/layout/default.vue */
+</span></span><span class="line" line="2"><span class="ct-883780">&lt;</span><span class="ct-801142">style</span><span class="ct-883780"> scoped</span><span class="ct-801142">&gt;
+</span></span><span class="line" line="3"><span class="ct-883780">  </span><span class="ct-905504">#</span><span class="ct-472638">main</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="4"><span class="ct-883780">    </span><span class="ct-283964">min-height</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">100</span><span class="ct-801142">vh;
+</span></span><span class="line" line="5"><span class="ct-883780">    </span><span class="ct-283964">display</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">grid;
+</span></span><span class="line" line="6"><span class="ct-883780">    </span><span class="ct-283964">grid-template-rows</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">auto</span><span class="ct-023380"> </span><span class="ct-073611">1</span><span class="ct-801142">fr</span><span class="ct-023380"> </span><span class="ct-801142">auto;
+</span></span><span class="line" line="7"><span class="ct-883780">    </span><span class="ct-283964">background-color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">white;
+</span></span><span class="line" line="8"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="9"><span>
+</span></span><span class="line" line="10"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="11"><span class="ct-883780">    </span><span class="ct-283964">display</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">block;
+</span></span><span class="line" line="12"><span class="ct-883780">    </span><span class="ct-283964">background-color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">black;
+</span></span><span class="line" line="13"><span class="ct-883780">    </span><span class="ct-283964">color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">white;
+</span></span><span class="line" line="14"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="15"><span>
+</span></span><span class="line" line="16"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-801142">ul</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="17"><span class="ct-883780">    </span><span class="ct-283964">margin</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">1</span><span class="ct-801142">rem</span><span class="ct-023380"> </span><span class="ct-073611">3</span><span class="ct-801142">vw;
+</span></span><span class="line" line="18"><span class="ct-883780">    </span><span class="ct-283964">padding</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">0</span><span class="ct-801142">;
+</span></span><span class="line" line="19"><span class="ct-883780">    </span><span class="ct-283964">list-style</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">none;
+</span></span><span class="line" line="20"><span class="ct-883780">    </span><span class="ct-283964">display</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">flex;
+</span></span><span class="line" line="21"><span class="ct-883780">    </span><span class="ct-283964">gap</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">1</span><span class="ct-801142">rem;
+</span></span><span class="line" line="22"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="23"><span>
+</span></span><span class="line" line="24"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-item</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="25"><span class="ct-883780">    </span><span class="ct-283964">display</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">list-item;
+</span></span><span class="line" line="26"><span class="ct-883780">    </span><span class="ct-283964">font-size</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">1</span><span class="ct-801142">rem;
+</span></span><span class="line" line="27"><span class="ct-883780">    </span><span class="ct-283964">font-weight</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">600</span><span class="ct-801142">;
+</span></span><span class="line" line="28"><span class="ct-883780">    </span><span class="ct-283964">text-decoration</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">none;
+</span></span><span class="line" line="29"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="30"><span>
+</span></span><span class="line" line="31"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-item</span><span class="ct-883780"> </span><span class="ct-801142">a</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="32"><span class="ct-883780">    </span><span class="ct-283964">display</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">block;
+</span></span><span class="line" line="33"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="34"><span>
+</span></span><span class="line" line="35"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-item</span><span class="ct-883780"> </span><span class="ct-801142">a</span><span class="ct-905504">:</span><span class="ct-472638">link</span><span class="ct-905504">,</span><span class="ct-883780"> </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-item</span><span class="ct-883780"> </span><span class="ct-801142">a</span><span class="ct-905504">:</span><span class="ct-472638">visited</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="36"><span class="ct-883780">        </span><span class="ct-283964">font-size</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">large;
+</span></span><span class="line" line="37"><span class="ct-883780">        </span><span class="ct-283964">font-weight</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">bolder;
+</span></span><span class="line" line="38"><span class="ct-883780">        </span><span class="ct-283964">font-family</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">sans-serif;
+</span></span><span class="line" line="39"><span class="ct-883780">        </span><span class="ct-283964">text-decoration</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">none;
+</span></span><span class="line" line="40"><span>
+</span></span><span class="line" line="41"><span class="ct-883780">        </span><span class="ct-283964">border</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">thick</span><span class="ct-023380"> </span><span class="ct-801142">double;
+</span></span><span class="line" line="42"><span>
+</span></span><span class="line" line="43"><span class="ct-883780">        </span><span class="ct-283964">color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">white;
+</span></span><span class="line" line="44"><span class="ct-883780">        </span><span class="ct-283964">padding</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">0.5</span><span class="ct-801142">rem</span><span class="ct-023380"> </span><span class="ct-073611">1</span><span class="ct-801142">rem;
+</span></span><span class="line" line="45"><span class="ct-883780">        </span><span class="ct-283964">font-family</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">sans-serif;
+</span></span><span class="line" line="46"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="47"><span>
+</span></span><span class="line" line="48"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-item</span><span class="ct-883780"> </span><span class="ct-801142">a</span><span class="ct-905504">:</span><span class="ct-472638">hover</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="49"><span class="ct-883780">        </span><span class="ct-283964">color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">black;
+</span></span><span class="line" line="50"><span class="ct-883780">        </span><span class="ct-283964">text-decoration</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">underline;
+</span></span><span class="line" line="51"><span class="ct-883780">        </span><span class="ct-283964">background-color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-905504">#</span><span class="ct-073611">f4f4f5</span><span class="ct-801142">;
+</span></span><span class="line" line="52"><span class="ct-883780">        </span><span class="ct-283964">box-shadow</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">5</span><span class="ct-801142">px</span><span class="ct-023380"> </span><span class="ct-073611">5</span><span class="ct-801142">px</span><span class="ct-023380"> </span><span class="ct-801142">white;
+</span></span><span class="line" line="53"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="54"><span>
+</span></span><span class="line" line="55"><span class="ct-883780">  </span><span class="ct-801142">footer</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="56"><span class="ct-883780">    </span><span class="ct-283964">background-color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">black;
+</span></span><span class="line" line="57"><span class="ct-883780">    </span><span class="ct-283964">color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">white;
+</span></span><span class="line" line="58"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="59"><span>
+</span></span><span class="line" line="60"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-btn</span><span class="ct-905504">:</span><span class="ct-472638">link</span><span class="ct-905504">,</span><span class="ct-883780"> </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-btn</span><span class="ct-905504">:</span><span class="ct-472638">visited</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="61"><span class="ct-883780">      </span><span class="ct-283964">font-size</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">large;
+</span></span><span class="line" line="62"><span class="ct-883780">      </span><span class="ct-283964">font-weight</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">bolder;
+</span></span><span class="line" line="63"><span class="ct-883780">      </span><span class="ct-283964">font-family</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">sans-serif;
+</span></span><span class="line" line="64"><span class="ct-883780">      </span><span class="ct-283964">text-decoration</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">none;
+</span></span><span class="line" line="65"><span>
+</span></span><span class="line" line="66"><span>
+</span></span><span class="line" line="67"><span class="ct-883780">      </span><span class="ct-283964">color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">white;
+</span></span><span class="line" line="68"><span class="ct-883780">      </span><span class="ct-283964">font-family</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">sans-serif;
+</span></span><span class="line" line="69"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="70"><span>
+</span></span><span class="line" line="71"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-btn</span><span class="ct-905504">:</span><span class="ct-472638">hover</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="72"><span class="ct-883780">      </span><span class="ct-283964">color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">black;
+</span></span><span class="line" line="73"><span class="ct-883780">      </span><span class="ct-283964">text-decoration</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">underline;
+</span></span><span class="line" line="74"><span class="ct-883780">      </span><span class="ct-283964">background-color</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-905504">#</span><span class="ct-073611">f4f4f5</span><span class="ct-801142">;
+</span></span><span class="line" line="75"><span class="ct-883780">      </span><span class="ct-283964">box-shadow</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-073611">5</span><span class="ct-801142">px</span><span class="ct-023380"> </span><span class="ct-073611">5</span><span class="ct-801142">px</span><span class="ct-023380"> </span><span class="ct-801142">white;
+</span></span><span class="line" line="76"><span class="ct-883780">  </span><span class="ct-905504">}
+</span></span><span class="line" line="77"><span>
+</span></span><span class="line" line="78"><span class="ct-883780">  </span><span class="ct-801142">nav</span><span class="ct-883780"> </span><span class="ct-905504">.</span><span class="ct-472638">nav-btn</span><span class="ct-905504">:</span><span class="ct-472638">active</span><span class="ct-883780"> </span><span class="ct-905504">{
+</span></span><span class="line" line="79"><span class="ct-883780">      </span><span class="ct-283964">background</span><span class="ct-905504">:</span><span class="ct-883780"> </span><span class="ct-801142">white;
+</span></span><span class="line" line="80"><span class="ct-883780">  </span><span class="ct-905504">}</span><span class="ct-883780"> 
+</span></span><span class="line" line="81"><span class="ct-883780">&lt;/</span><span class="ct-801142">style&gt;</span></span></code></pre><!--]--></div><p><!--[-->然后就好看了许多。<!--]--></p><p><!--[--><div class="prose-img" data-v-e7a78aa7><img src="https://cdn.jsdelivr.net/gh/hanyujie2002/my_pictures/images/20240303210008.png" alt="20240303210008" data-v-e7a78aa7><!----></div><!--]--></p><style>.ct-779485{color:#616E88;}
+.ct-883780{color:#D8DEE9FF;}
+.ct-801142{color:#81A1C1;}
+.ct-905504{color:#ECEFF4;}
+.ct-472638{color:#8FBCBB;}
+.ct-283964{color:#D8DEE9;}
+.ct-073611{color:#B48EAD;}
+.ct-023380{color:#88C0D0;}</style></div><!--]--></main><!--]--></main><footer id="footer" data-v-497c81cb><p data-v-497c81cb>This blog is supported by Nuxt</p></footer></div></div></div><script type="application/json" id="__NUXT_DATA__" data-ssr="true" data-src="/blog/zh/lets_start_build_blog_with_nuxt_6/_payload.json">[{"state":1,"_errors":5,"serverRendered":8,"path":9,"prerenderedAt":10},["Reactive",2],{"$scurrent_page":3,"$sisshowlist":4},"/",false,["Reactive",6],{"content-query-DhprC9TFhr":7},null,true,"/blog/zh/lets_start_build_blog_with_nuxt_6",1709471263942]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{content:{locales:[],defaultLocale:"",integrity:1709471252601,experimental:{stripQueryParameters:false,clientDB:false},respectPathCase:false,api:{baseURL:"/api/_content"},navigation:{fields:[]},tags:{p:"prose-p",a:"prose-a",blockquote:"prose-blockquote","code-inline":"prose-code-inline",code:"prose-code",em:"prose-em",h1:"prose-h1",h2:"prose-h2",h3:"prose-h3",h4:"prose-h4",h5:"prose-h5",h6:"prose-h6",hr:"prose-hr",img:"prose-img",ul:"prose-ul",ol:"prose-ol",li:"prose-li",strong:"prose-strong",table:"prose-table",thead:"prose-thead",tbody:"prose-tbody",td:"prose-td",th:"prose-th",tr:"prose-tr"},highlight:{theme:"nord",preload:["python","c","java"]},wsUrl:"",documentDriven:false,host:"",trailingSlash:false,anchorLinks:{depth:4,exclude:[1]}}},app:{baseURL:"/",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script><script type="module" src="/_nuxt/entry.26c38fba.js" crossorigin></script></body>
+</html>
