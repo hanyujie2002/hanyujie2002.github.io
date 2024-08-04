@@ -1,0 +1,1 @@
+import{_ as o,o as s,e as t,k as c}from"./DEAGoHIn.js";const r={},n={class:"hello"};function a(e,d){return s(),t("div",n,[c(e.$slots,"default",{},void 0,!0)])}const l=o(r,[["render",a],["__scopeId","data-v-d99102ce"]]);export{l as default};
